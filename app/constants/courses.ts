@@ -1,0 +1,242 @@
+export type Course = {
+  id: number;
+  code: string;
+  title: string;
+  description: string;
+  year: "Year 1" | "Year 2" | "Year 3" | "Year 4";
+  semester: "Semester 1" | "Semester 2";
+  program: string;
+  credits: number;
+  lecturer: string;
+  students: number;
+  status: "Active" | "Inactive" | "Pending";
+  completion: "Completed" | "Backlog" | "In Progress" | "Failed" | "Uncompleted";
+};
+
+export const courses: Course[] = [
+  {
+    id: 1,
+    code: "CS-101",
+    title: "Introduction to Computer Science",
+    description:
+      "Explores core computational thinking, problem solving, and introductory programming concepts.",
+    year: "Year 1",
+    semester: "Semester 1",
+    program: "Computer Science",
+    credits: 3,
+    lecturer: "Dr. Kwame Mensah",
+    students: 84,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 2,
+    code: "MATH-201",
+    title: "Calculus II",
+    description:
+      "Builds on differential and integral calculus with advanced techniques and real-world applications.",
+    year: "Year 1",
+    semester: "Semester 2",
+    program: "Mathematics",
+    credits: 4,
+    lecturer: "Prof. Ama Boateng",
+    students: 62,
+    status: "Active",
+    completion: "Failed",
+  },
+  {
+    id: 3,
+    code: "ENG-110",
+    title: "Academic Writing",
+    description:
+      "Develops research, argumentation, and formal writing skills required for scholarly communication.",
+    year: "Year 1",
+    semester: "Semester 1",
+    program: "General Studies",
+    credits: 3,
+    lecturer: "Ms. Linda Owusu",
+    students: 96,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 4,
+    code: "BIO-120",
+    title: "General Biology",
+    description:
+      "Introduces cell biology, ecosystems, genetics, and core biological processes affecting life systems.",
+    year: "Year 1",
+    semester: "Semester 2",
+    program: "Biological Sciences",
+    credits: 4,
+    lecturer: "Dr. Samuel Addo",
+    students: 71,
+    status: "Active",
+    completion: "Uncompleted",
+  },
+  {
+    id: 5,
+    code: "BUS-205",
+    title: "Principles of Marketing",
+    description:
+      "Covers customer behavior, branding, market analysis, and strategic marketing planning.",
+    year: "Year 2",
+    semester: "Semester 1",
+    program: "Business Administration",
+    credits: 3,
+    lecturer: "Mr. Daniel Asare",
+    students: 58,
+    status: "Active",
+    completion: "Backlog",
+  },
+  {
+    id: 6,
+    code: "PHY-101",
+    title: "Fundamentals of Physics",
+    description:
+      "Introduces classical mechanics, energy, and foundational physical laws through practical examples.",
+    year: "Year 1",
+    semester: "Semester 2",
+    program: "Physical Sciences",
+    credits: 4,
+    lecturer: "Dr. Yaa Arthur",
+    students: 49,
+    status: "Pending",
+    completion: "In Progress",
+  },
+  {
+    id: 7,
+    code: "HIS-210",
+    title: "African History",
+    description:
+      "Examines historical developments, cultural transformations, and major societies across Africa.",
+    year: "Year 2",
+    semester: "Semester 2",
+    program: "History",
+    credits: 3,
+    lecturer: "Dr. Ibrahim Sulemana",
+    students: 43,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 8,
+    code: "ART-115",
+    title: "Foundations of Design",
+    description:
+      "Focuses on visual composition, color theory, and creative problem solving in design practice.",
+    year: "Year 1",
+    semester: "Semester 1",
+    program: "Fine Arts",
+    credits: 3,
+    lecturer: "Ms. Efua Quaye",
+    students: 35,
+    status: "Active",
+    completion: "Failed",
+  },
+  {
+    id: 9,
+    code: "ECON-202",
+    title: "Microeconomics",
+    description:
+      "Studies consumer choices, market behavior, production decisions, and competitive pricing.",
+    year: "Year 2",
+    semester: "Semester 1",
+    program: "Economics",
+    credits: 3,
+    lecturer: "Prof. Joseph Nartey",
+    students: 67,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 10,
+    code: "CHEM-130",
+    title: "Organic Chemistry",
+    description:
+      "Explores carbon-based compounds, reaction mechanisms, and laboratory techniques in chemical synthesis.",
+    year: "Year 2",
+    semester: "Semester 2",
+    program: "Chemistry",
+    credits: 4,
+    lecturer: "Dr. Nadia Karim",
+    students: 39,
+    status: "Inactive",
+    completion: "Backlog",
+  },
+  {
+    id: 11,
+    code: "PSY-101",
+    title: "Introduction to Psychology",
+    description:
+      "Introduces behavior, cognition, emotion, and the scientific study of the human mind.",
+    year: "Year 1",
+    semester: "Semester 1",
+    program: "Psychology",
+    credits: 3,
+    lecturer: "Dr. Mabel Asante",
+    students: 76,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 12,
+    code: "STAT-205",
+    title: "Applied Statistics",
+    description:
+      "Teaches probability, data interpretation, hypothesis testing, and statistical analysis methods.",
+    year: "Year 3",
+    semester: "Semester 1",
+    program: "Data Science",
+    credits: 3,
+    lecturer: "Mr. Felix Kusi",
+    students: 54,
+    status: "Pending",
+    completion: "Uncompleted",
+  },
+  {
+    id: 13,
+    code: "LAW-150",
+    title: "Business Law",
+    description:
+      "Covers contracts, commercial obligations, legal risk, and corporate compliance in business settings.",
+    year: "Year 3",
+    semester: "Semester 2",
+    program: "Law",
+    credits: 3,
+    lecturer: "Mrs. Adwoa Frimpong",
+    students: 46,
+    status: "Active",
+    completion: "Completed",
+  },
+  {
+    id: 14,
+    code: "SOC-220",
+    title: "Community and Society",
+    description:
+      "Examines social institutions, group behavior, inequality, and community development structures.",
+    year: "Year 4",
+    semester: "Semester 1",
+    program: "Sociology",
+    credits: 3,
+    lecturer: "Dr. Michael Tetteh",
+    students: 51,
+    status: "Active",
+    completion: "Backlog",
+  },
+  {
+    id: 15,
+    code: "IT-310",
+    title: "Database Systems",
+    description:
+      "Introduces database design, SQL, schema modeling, and data management principles for applications.",
+    year: "Year 4",
+    semester: "Semester 2",
+    program: "Information Technology",
+    credits: 3,
+    lecturer: "Mr. Richard Ofori",
+    students: 42,
+    status: "Active",
+    completion: "Backlog",
+  },
+];

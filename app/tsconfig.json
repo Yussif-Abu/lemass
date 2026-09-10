@@ -22,7 +22,7 @@
         "name": "next"
       }
     ],
-   "paths": {
+    "paths": {
       "@/*": [
         "./app/*"
       ]
@@ -35,7 +35,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "app/(root)/admin/courses"
+    "app/(root)/campuses"
   ],
   "exclude": [
     "node_modules"
