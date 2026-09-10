@@ -13,7 +13,6 @@ import {
   Cpu,
   CreditCard,
   FileText,
-  GraduationCap,
   Layers3,
   LayoutDashboard,
   LogOut,
@@ -23,12 +22,13 @@ import {
   PanelLeftOpen,
   Settings,
   ShieldCheck,
+  Sparkles,
   UserCheck,
   Users,
-  X,
+  X,GraduationCap,
   type LucideIcon,
 } from "lucide-react";
-
+import { School } from 'lucide-react';
 import type { NavigationIcon, SidebarNavigation } from "../config/navigation";
 
 const iconMap: Record<NavigationIcon, LucideIcon> = {
@@ -50,6 +50,7 @@ const iconMap: Record<NavigationIcon, LucideIcon> = {
   monitor: Monitor,
   settings: Settings,
   "shield-check": ShieldCheck,
+  sparkles: Sparkles,
   "user-check": UserCheck,
   users: Users,
 };
@@ -98,13 +99,10 @@ const Sidebar = ({
       {/* Brand */}
       <div className="sidebar-header">
         <Link href="/dashboard" className="sidebar-brand" onClick={onClose}>
-          <span className="sidebar-brand-icon">
-            <GraduationCap size={22} />
-          </span>
-
+        
+            <School size={20} />
           <span>
             <span className="sidebar-brand-title">School Portal</span>
-
             <span className="sidebar-brand-subtitle">Management System</span>
           </span>
         </Link>
@@ -137,7 +135,7 @@ const Sidebar = ({
       {/* Navigation */}
       <nav className="sidebar-navigation">
         {[{ title: "Main", items: navigation.main }].map((group) => (
-          <div key={group.title} className="sidebar-nav-group">
+          <div key={group.title} className="sidebar-nav-group text-white">
             <p className="sidebar-section-title">{group.title}</p>
 
             <ul className="sidebar-menu">
@@ -152,7 +150,7 @@ const Sidebar = ({
                       href={item.href}
                       onClick={onClose}
                       title={isCollapsed ? item.title : undefined}
-                      className={`sidebar-link ${
+                      className={`sidebar-link ${item.title === "StudyMate AI" ? "sidebar-link-ai" : ""} ${
                         active ? "sidebar-link-active" : ""
                       }`}
                       aria-current={active ? "page" : undefined}
@@ -161,7 +159,7 @@ const Sidebar = ({
 
                       <span>{item.title}</span>
                       {item.badge && (
-                        <span className="ml-auto">{item.badge}</span>
+                        <span className="sidebar-link-badge">{item.badge}</span>
                       )}
                     </Link>
                   </li>

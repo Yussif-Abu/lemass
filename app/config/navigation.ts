@@ -19,6 +19,7 @@ export type NavigationIcon =
   | "monitor"
   | "settings"
   | "shield-check"
+  | "sparkles"
   | "user-check"
   | "users";
 
@@ -39,10 +40,10 @@ export const STUDENT_SIDEBAR: SidebarNavigation = {
     { title: "Dashboard", href: "/", icon: "layout-dashboard" },
     { title: "My Courses", href: "/courses", icon: "book-open" },
     { title: "Assignments", href: "/assignments", icon: "file-text" },
-    { title: "Grades", href: "/grades", icon: "bar-chart" },
+    { title: "Grades", href: "/grades", icon: "graduation-cap" },
     { title: "E-Library", href: "/library", icon: "book-open" },
     { title: "Announcements", href: "/announcements", icon: "bell", badge: 3 },
-    { title: "StudyMate AI", href: "/study-mate", icon: "cpu" },
+    { title: "StudyMate AI", href: "/study-mate", icon: "sparkles" },
   ],
   bottom: [
     { title: "Settings", href: "/settings", icon: "settings" },
