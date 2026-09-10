@@ -168,7 +168,7 @@ export function StudentsTable({ initialData, initialUrlState }: StudentsTablePro
       data={rows}
       exportFileName="students"
       filters={filters}
-      getRowId={(student) => student.id}
+      getRowId={(student) => String(student.id)}
       onCreate={handleCreate}
       onDelete={handleDelete}
       onEdit={handleEdit}
