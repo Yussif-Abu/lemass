@@ -1466,3 +1466,74 @@
     display: none;
   }
 }
+
+/* Course registration */
+.registration-page { @apply space-y-5; }
+.registration-page .page-header { @apply mb-0; }
+.registration-layout { @apply grid min-w-0 gap-4 xl:grid-cols-[minmax(0,1fr)_340px]; }
+.registration-main { @apply min-w-0 space-y-3; }
+.registration-filters { @apply grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:grid-cols-2 xl:grid-cols-[minmax(220px,1fr)_minmax(140px,0.55fr)_minmax(110px,0.4fr)_minmax(110px,0.4fr)_auto] xl:items-end; }
+.registration-field { @apply flex min-w-0 flex-col gap-1.5 text-sm font-semibold text-slate-800; }
+.registration-field select { @apply h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm font-normal text-slate-800 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/15; }
+.registration-search-input { @apply relative flex h-11 items-center gap-3 rounded-lg border border-slate-200 px-3 text-slate-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/15; }
+.registration-search-input input { @apply min-w-0 flex-1 border-0 bg-transparent text-sm font-normal text-slate-800 outline-none placeholder:text-slate-500; }
+.registration-search-button { @apply h-11 rounded-lg bg-blue-600 px-5 text-sm font-semibold text-white transition hover:bg-blue-700; }
+.registration-course-panel { @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm; }
+.registration-panel-heading { @apply flex flex-wrap items-center justify-between gap-2 px-5 py-4; }
+.registration-panel-heading h2 { @apply text-base font-bold text-slate-900; }
+.registration-panel-heading span { @apply text-sm text-slate-500; }
+.registration-table-scroll { @apply overflow-x-auto px-3 pb-3; }
+.registration-table { @apply w-full min-w-[920px] border-collapse text-left text-sm; }
+.registration-table thead { @apply bg-slate-100 text-xs font-semibold text-slate-800; }
+.registration-table th { @apply whitespace-nowrap px-3 py-3; }
+.registration-table th:first-child { @apply rounded-l-lg; }
+.registration-table th:last-child { @apply rounded-r-lg; }
+.registration-table th:last-child,
+.registration-table td:last-child { @apply sticky right-0 z-10 w-28 bg-white text-center; }
+.registration-table th:last-child { @apply bg-slate-100; }
+.registration-table tbody tr:hover td:last-child { @apply bg-slate-50; }
+.registration-table td { @apply border-b border-slate-100 px-3 py-2 text-slate-800; }
+.registration-table tbody tr:last-child td { @apply border-b-0; }
+.registration-table tbody tr:hover { @apply bg-slate-50/70; }
+.registration-table .registration-title-cell { @apply min-w-40 font-medium; }
+.registration-schedule { @apply grid grid-cols-[16px_1fr] items-center gap-x-2 gap-y-1 whitespace-nowrap text-xs leading-5 text-slate-700; }
+.registration-schedule svg { @apply text-slate-500; }
+.registration-mode { @apply inline-flex whitespace-nowrap rounded-lg px-2.5 py-1 text-xs font-semibold; }
+.registration-mode-day { @apply bg-blue-100 text-blue-700; }
+.registration-mode-evening { @apply bg-violet-100 text-violet-700; }
+.registration-mode-weekend { @apply bg-orange-100 text-orange-700; }
+.registration-add-button, .registration-added-button { @apply inline-flex h-9 min-w-20 items-center justify-center gap-1.5 rounded-lg px-3 text-sm font-semibold transition; }
+.registration-add-button { @apply bg-blue-600 text-white hover:bg-blue-700; }
+.registration-added-button { @apply bg-emerald-100 text-emerald-700; }
+.registration-empty { @apply py-12 text-center text-slate-500; }
+.registration-sidebar { @apply min-w-0; }
+.registration-summary-card { @apply rounded-2xl border border-slate-200 bg-white p-3 shadow-sm; }
+.registration-summary-heading { @apply flex items-center gap-3 px-1 py-2 text-blue-600; }
+.registration-summary-heading h2 { @apply min-w-0 flex-1 text-base font-bold text-slate-900; }
+.registration-summary-heading span { @apply whitespace-nowrap text-sm text-slate-600; }
+.registration-selected-list { @apply space-y-2 py-2; }
+.registration-selected-course { @apply rounded-xl border border-slate-200 bg-white p-3; }
+.registration-selected-top { @apply flex items-start gap-2; }
+.registration-selected-top > div { @apply min-w-0 flex-1; }
+.registration-selected-top strong { @apply text-sm font-bold text-slate-900; }
+.registration-selected-top p { @apply mt-1 text-sm leading-5 text-slate-800; }
+.registration-selected-top button { @apply ml-auto shrink-0 rounded-md p-1 text-red-500 hover:bg-red-50; }
+.registration-selected-meta { @apply mt-3 flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-xs text-slate-600; }
+.registration-selected-meta span { @apply inline-flex items-center gap-1.5 whitespace-nowrap; }
+.registration-selected-meta svg { @apply text-slate-500; }
+.registration-selection-empty { @apply rounded-xl border border-dashed border-slate-200 px-4 py-6 text-center text-sm text-slate-500; }
+.registration-credit-summary { @apply mt-3 rounded-xl border border-slate-200 p-3; }
+.registration-credit-summary h3 { @apply mb-1 text-sm font-bold text-slate-900; }
+.registration-credit-summary div { @apply flex items-center justify-between border-b border-slate-100 py-2 text-sm text-slate-600; }
+.registration-credit-summary div:last-child { @apply border-0 pb-0; }
+.registration-credit-summary strong { @apply font-medium text-slate-800; }
+.registration-credit-summary .registration-remaining { @apply font-bold text-slate-900; }
+.registration-credit-summary .registration-remaining strong { @apply text-blue-600; }
+.registration-notice { @apply my-3 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-800; }
+.registration-notice-success { @apply bg-emerald-50 text-emerald-800; }
+.registration-confirm-button, .registration-clear-button { @apply mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition; }
+.registration-confirm-button { @apply bg-emerald-600 text-white hover:bg-emerald-700; }
+.registration-clear-button { @apply border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100; }
+@media (max-width: 1279px) {
+  .registration-sidebar { @apply xl:sticky xl:top-20 xl:self-start; }
+}
