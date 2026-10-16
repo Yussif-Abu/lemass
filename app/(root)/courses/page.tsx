@@ -1,4 +1,4 @@
-import Link from "next/link";
+import CourseCard from "../../components/CourseCard";
 import Accordion from "../../components/accordion";
 import Heading from "../../components/Header";
 import { courses } from "../../constants";
@@ -39,43 +39,15 @@ const Courses = () => {
               <h4 className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
                 {semester}
               </h4>
-
-              <div className="space-y-3">
-                {items.map((course) => (
-                  <div
+              <div className="my-courses-grid">
+                {items.map((course, index) => (
+                  <CourseCard
                     key={course.id}
-                    className="rounded-md border border-slate-200 bg-slate-50 p-3"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <Link
-                          href={`/courses/${course.id}`}
-                          className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#0f4ed8] transition hover:text-blue-700"
-                        >
-                          {course.code}
-                        </Link>
-                        <h5 className="mt-1 text-base font-semibold text-slate-900">
-                          {course.title}
-                        </h5>
-                      </div>
-
-                      <span className="rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-medium text-emerald-700">
-                        {course.status}
-                      </span>
-                    </div>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      {course.description}
-                    </p>
-
-                    <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-500">
-                      <span>{course.program}</span>
-                      <span>•</span>
-                      <span>{course.credits} credits</span>
-                      <span>•</span>
-                      <span>{course.lecturer}</span>
-                    </div>
-                  </div>
+                    course={course}
+                    progress={course.completion === "Completed" ? 100 : 45}
+                    variant={index}
+                    href={`/courses/${course.id}`}
+                  />
                 ))}
               </div>
             </div>

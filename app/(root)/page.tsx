@@ -7,12 +7,11 @@ import {
   CircleDollarSign,
   ClipboardCheck,
   Clock3,
-  GraduationCap,
   Lightbulb,
-  ListChecks,
   TrendingUp,
 } from "lucide-react";
 
+import CourseCard from "../components/CourseCard";
 import StatsGrid, { type StatItem } from "../components/ui/stat-grid";
 import { announcements, assignments, courses } from "../constants";
 
@@ -125,37 +124,12 @@ const Home = () => {
           <DashboardSectionHeading title="My Courses" action="View All" />
           <div className="my-courses-grid">
             {semesterOneCourses.map((course, index) => (
-              <article
-                className={`my-course-card my-course-card-${index % 3}`}
+              <CourseCard
                 key={course.id}
-              >
-                <div className="my-course-card-topline">
-                  <span>{course.code}</span>
-                  <span>{course.credits} Credits</span>
-                </div>
-                <h3>{course.title}</h3>
-                <p>{course.description}</p>
-                <div className="my-course-card-meta">
-                  <span>
-                    <GraduationCap size={13} aria-hidden="true" />{" "}
-                    {course.lecturer}
-                  </span>
-                  <span>
-                    <ListChecks size={13} aria-hidden="true" />{" "}
-                    {course.completion}
-                  </span>
-                </div>
-                <div className="course-progress-label">
-                  <span>Course progress</span>
-                  <strong>{index === 0 ? "66%" : "45%"}</strong>
-                </div>
-                <div className="dashboard-progress course-progress">
-                  <span style={{ width: index === 0 ? "66%" : "45%" }} />
-                </div>
-                <button type="button" className="continue-course-button">
-                  Continue Learning
-                </button>
-              </article>
+                course={course}
+                progress={index === 0 ? 66 : 45}
+                variant={index}
+              />
             ))}
           </div>
         </div>
